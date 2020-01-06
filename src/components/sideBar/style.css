@@ -1,0 +1,111 @@
+.side-bar-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*background-color: rgba(0, 0, 0, 0.23);*/
+    z-index: 8;
+}
+
+.side-bar {
+    margin: 0;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    z-index: 9;
+}
+
+.open {
+    animation-name: slide_in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+
+.closed {
+    left: -320px;
+    animation-name: slide_out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+
+.default {
+    left: -320px;
+}
+
+.title {
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.translate-title {
+    margin-left: 4px;
+    color: #5f6368;
+    font-size: 22px;
+    line-height: 24px;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+}
+
+.google-title {
+    background: url("https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg");
+    display: inline-block;
+    height: 24px;
+    width: 74px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.side-bar-item {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 60px;
+    line-height: 40px;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.87);
+    user-select: none;
+}
+
+.side-bar-item:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.divider {
+    padding-bottom: 8px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+@keyframes slide_in {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes slide_out {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -320px;
+    }
+}

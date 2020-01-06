@@ -1,0 +1,93 @@
+.app-bar {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 64px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.app-bar-item-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.app-bar-right-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.translate-title {
+    margin-left: 4px;
+    color: #5f6368;
+    font-size: 22px;
+    line-height: 24px;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+}
+
+.google-title {
+    background: url("https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg");
+    display: inline-block;
+    height: 24px;
+    width: 74px;
+}
+
+.user-icon-image {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: orangered;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Product Sans', Arial, sans-serif;
+    font-size: 14px;
+}
+
+.user-icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.app-bar-icon {
+    height: 20px;
+    width: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.app-bar-icon:hover, .user-icon:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+    outline: none;
+}
