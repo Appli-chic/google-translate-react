@@ -5,6 +5,7 @@ import translateIcon from '../../assets/baseline_translate_black_48dp.png'
 import documentIcon from '../../assets/icons8-file-48.png'
 
 import './style.css'
+import TranslateBox from '../../components/translateBox/translateBox'
 
 interface HomeState {
     isTextButtonActive: boolean
@@ -17,13 +18,7 @@ class Home extends React.Component<{}, HomeState> {
         isDocumentsButtonActive: false,
     }
 
-    constructor(props: {}) {
-        super(props)
-
-        this.onButtonClicked = this.onButtonClicked.bind(this)
-    }
-
-    onButtonClicked(): void {
+    onButtonClicked = (): void => {
         this.setState({
             isTextButtonActive: !this.state.isTextButtonActive,
             isDocumentsButtonActive: !this.state.isDocumentsButtonActive,
@@ -36,19 +31,23 @@ class Home extends React.Component<{}, HomeState> {
                 <AppBar />
 
                 <div className="container">
-                    <div className="button-container">
-                        <Button
-                            text="Text"
-                            icon={translateIcon}
-                            isActive={this.state.isTextButtonActive}
-                            onClick={this.onButtonClicked}
-                        />
-                        <Button
-                            text="Documents"
-                            icon={documentIcon}
-                            isActive={this.state.isDocumentsButtonActive}
-                            onClick={this.onButtonClicked}
-                        />
+                    <div className="container-fixed-size">
+                        <div className="button-container">
+                            <Button
+                                text="Text"
+                                icon={translateIcon}
+                                isActive={this.state.isTextButtonActive}
+                                onClick={this.onButtonClicked}
+                            />
+                            <Button
+                                text="Documents"
+                                icon={documentIcon}
+                                isActive={this.state.isDocumentsButtonActive}
+                                onClick={this.onButtonClicked}
+                            />
+                        </div>
+
+                        <TranslateBox />
                     </div>
                 </div>
             </div>

@@ -1,6 +1,13 @@
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.container-fixed-size {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
 }
 
 .button-container {
