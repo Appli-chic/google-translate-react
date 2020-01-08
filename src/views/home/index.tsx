@@ -5,7 +5,7 @@ import translateIcon from '../../assets/baseline_translate_black_48dp.png'
 import documentIcon from '../../assets/icons8-file-48.png'
 
 import './style.css'
-import TranslateBox from '../../components/translateBox/translateBox'
+import TranslateBox from '../../components/translateBox'
 
 interface HomeState {
     isTextButtonActive: boolean
@@ -18,11 +18,22 @@ class Home extends React.Component<{}, HomeState> {
         isDocumentsButtonActive: false,
     }
 
-    onButtonClicked = (): void => {
-        this.setState({
-            isTextButtonActive: !this.state.isTextButtonActive,
-            isDocumentsButtonActive: !this.state.isDocumentsButtonActive,
-        })
+    onTextButtonClicked = (): void => {
+        if (!this.state.isTextButtonActive) {
+            this.setState({
+                isTextButtonActive: !this.state.isTextButtonActive,
+                isDocumentsButtonActive: !this.state.isDocumentsButtonActive,
+            })
+        }
+    }
+
+    onDocumentsButtonClicked = (): void => {
+        if (!this.state.isDocumentsButtonActive) {
+            this.setState({
+                isTextButtonActive: !this.state.isTextButtonActive,
+                isDocumentsButtonActive: !this.state.isDocumentsButtonActive,
+            })
+        }
     }
 
     render(): JSX.Element {
@@ -37,13 +48,13 @@ class Home extends React.Component<{}, HomeState> {
                                 text="Text"
                                 icon={translateIcon}
                                 isActive={this.state.isTextButtonActive}
-                                onClick={this.onButtonClicked}
+                                onClick={this.onTextButtonClicked}
                             />
                             <Button
                                 text="Documents"
                                 icon={documentIcon}
                                 isActive={this.state.isDocumentsButtonActive}
-                                onClick={this.onButtonClicked}
+                                onClick={this.onDocumentsButtonClicked}
                             />
                         </div>
 

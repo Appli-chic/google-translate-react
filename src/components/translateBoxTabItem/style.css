@@ -1,0 +1,18 @@
+.translate-box-tab-element {
+    color: rgba(0,0,0,0.54);
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 24px;
+    padding-left: 24px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0px;
+    user-select: none;
+}
+
+.translate-box-tab-element-active {
+    color: #4285f4;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-bottom: 3px solid #4285f4;
+}
